@@ -2,13 +2,11 @@
 This repository provides a simple log function that can be used in Makefiles.
 
 # Usage
-To use this log function you can add this repository as a submodule:
-```shell
-git submodule add git@github.com:Noah-Huppert/make-log.git build-extensions/make-log
-```
+Since this function doesn't really change it is easiest to download the `make-log.mk` file and copy its contents into your Makefile. 
+Please add a little comment above it telling people where you got it.
 
-Then include `make-log.mk` in your `Makefile`:
+Then call it like so:
 ```Makefile
-include build/extensions/**/*.mk
+$(call log,level,message)
 ```
-
+Where level can be `ok`, `warn`, or `error` and message can be an message.
